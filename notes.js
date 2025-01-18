@@ -6,6 +6,7 @@ const searchInput = document.getElementById('searchInput');
 const exportPDFButton = document.getElementById('exportPDF');
 const exportTextButton = document.getElementById('exportText');
 const filterCategory = document.getElementById('filterCategory');
+const toggleDarkModeButton = document.getElementById('toggleDarkMode');
 
 let notes = JSON.parse(localStorage.getItem('notes')) || [];
 
@@ -67,9 +68,14 @@ function exportNotesToText() {
     link.click();
 }
 
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+
 addNoteButton.addEventListener('click', addNote);
 searchInput.addEventListener('input', () => renderNotes(searchInput.value, filterCategory.value));
 filterCategory.addEventListener('change', () => renderNotes(searchInput.value, filterCategory.value));
 exportPDFButton.addEventListener('click', exportNotesToPDF);
 exportTextButton.addEventListener('click', exportNotesToText);
+toggleDarkModeButton.addEventListener('click', toggleDarkMode);
 renderNotes();

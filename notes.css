@@ -1,3 +1,7 @@
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
 .notes-container {
     width: 50%;
     margin: 100px auto;
@@ -8,7 +12,9 @@
     background-color: #f9f9f9;
     text-align: center;
     animation: fadeIn 1s ease-in-out;
+    transition: background-color 0.3s, color 0.3s;
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -17,10 +23,12 @@
         opacity: 1;
     }
 }
+
 h1 {
     font-size: 24px;
     margin-bottom: 20px;
 }
+
 input[type="text"], textarea, select {
     width: 100%;
     padding: 10px;
@@ -29,7 +37,9 @@ input[type="text"], textarea, select {
     border: 1px solid #ccc;
     border-radius: 5px;
     animation: slideIn 0.5s ease-in-out;
+    transition: background-color 0.3s, color 0.3s;
 }
+
 @keyframes slideIn {
     from {
         transform: translateY(-20px);
@@ -40,6 +50,7 @@ input[type="text"], textarea, select {
         opacity: 1;
     }
 }
+
 button {
     padding: 10px 25px;
     font-size: 16px;
@@ -54,17 +65,21 @@ button {
     justify-content: center;
     margin: 5px;
 }
+
 button i {
     margin-right: 5px;
 }
+
 button:hover {
     background-color: #4cae4c;
     transform: scale(1.05);
 }
+
 ul {
     list-style: none;
     padding: 0;
 }
+
 li {
     background-color: #fff;
     padding: 10px;
@@ -75,7 +90,9 @@ li {
     justify-content: space-between;
     align-items: center;
     animation: fadeIn 0.5s ease-in-out;
+    transition: background-color 0.3s, color 0.3s;
 }
+
 li button {
     background-color: #d9534f;
     color: #fff;
@@ -87,10 +104,45 @@ li button {
     align-items: center;
     justify-content: center;
 }
+
 li button i {
     margin-right: 5px;
 }
+
 li button:hover {
     background-color: #c9302c;
     transform: scale(1.05);
+}
+
+/* Styles pour le mode sombre */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .notes-container {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+body.dark-mode li {
+    background-color: #333;
+    border-color: #555;
+}
+
+body.dark-mode button {
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+body.dark-mode button:hover {
+    background-color: #4cae4c;
 }
