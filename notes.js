@@ -8,9 +8,9 @@ function renderNotes() {
     notesList.innerHTML = '';
     notes.forEach((note, index) => {
         const li = document.createElement('li');
-        li.textContent = note;
+        li.innerHTML = `<span>${note}</span>`;
         const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Supprimer';
+        deleteButton.innerHTML = '<i class="fas fa-trash"></i> Supprimer';
         deleteButton.addEventListener('click', () => {
             deleteNote(index);
         });

@@ -1,38 +1,64 @@
 .notes-container {
     width: 50%;
     margin: 100px auto;
-    padding: 20px;
+    padding: 30px;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
     text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 h1 {
     font-size: 24px;
     margin-bottom: 20px;
 }
-textarea {
+input[type="text"], textarea, select {
     width: 100%;
-    height: 100px;
     padding: 10px;
     font-size: 16px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    animation: slideIn 0.5s ease-in-out;
+}
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 button {
-    padding: 10px 20px;
+    padding: 10px 25px;
     font-size: 16px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     background-color: #5cb85c;
     color: #fff;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button i {
+    margin-right: 5px;
 }
 button:hover {
     background-color: #4cae4c;
+    transform: scale(1.05);
 }
 ul {
     list-style: none;
@@ -47,6 +73,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
 }
 li button {
     background-color: #d9534f;
@@ -55,7 +82,14 @@ li button {
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+li button i {
+    margin-right: 5px;
 }
 li button:hover {
     background-color: #c9302c;
+    transform: scale(1.05);
 }
