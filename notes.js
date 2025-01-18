@@ -5,13 +5,15 @@ const notesList = document.getElementById('notesList');
 const searchInput = document.getElementById('searchInput');
 const exportPDFButton = document.getElementById('exportPDF');
 const exportTextButton = document.getElementById('exportText');
+const filterCategory = document.getElementById('filterCategory');
 
 let notes = JSON.parse(localStorage.getItem('notes')) || [];
 
-function renderNotes(filter = '') {
+function renderNotes(filter = '', categoryFilter = 'all') {
     notesList.innerHTML = '';
     notes
         .filter(note => note.text.toLowerCase().includes(filter.toLowerCase()))
+        .filter(note => categoryFilter === 'all' || note.category === categoryFilter)
         .forEach((note, index) => {
             const li = document.createElement('li');
             li.innerHTML = `<span>${note.text} (${note.category})</span>`;
@@ -66,7 +68,8 @@ function exportNotesToText() {
 }
 
 addNoteButton.addEventListener('click', addNote);
-searchInput.addEventListener('input', () => renderNotes(searchInput.value));
+searchInput.addEventListener('input', () => renderNotes(searchInput.value, filterCategory.value));
+filterCategory.addEventListener('change', () => renderNotes(searchInput.value, filterCategory.value));
 exportPDFButton.addEventListener('click', exportNotesToPDF);
 exportTextButton.addEventListener('click', exportNotesToText);
 renderNotes();
