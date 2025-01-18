@@ -52,6 +52,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 5px;
 }
 button i {
     margin-right: 5px;

@@ -10,10 +10,20 @@
 <body>
     <div class="notes-container">
         <h1>Outil de prise de notes</h1>
+        <h4>ATTENTION : exporter vos notes avant d'arreter votre pc</h4>
+        <input type="text" id="searchInput" placeholder="Rechercher des notes...">
         <textarea id="noteInput" placeholder="Écrivez votre note ici..."></textarea>
+        <select id="categoryInput">
+            <option value="Général">Général</option>
+            <option value="Travail">Travail</option>
+            <option value="Personnel">Personnel</option>
+        </select>
         <button id="addNote"><i class="fas fa-plus"></i> Ajouter la note</button>
+        <button id="exportPDF"><i class="fas fa-file-pdf"></i> Exporter en PDF</button>
+        <button id="exportText"><i class="fas fa-file-alt"></i> Exporter en texte</button>
         <ul id="notesList"></ul>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
     <script src="notes.js"></script>
 </body>
 </html>
