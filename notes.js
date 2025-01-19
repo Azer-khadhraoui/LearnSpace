@@ -8,8 +8,12 @@ const exportTextButton = document.getElementById('exportText');
 const filterCategory = document.getElementById('filterCategory');
 const toggleDarkModeButton = document.getElementById('toggleDarkMode');
 const imageInput = document.getElementById('imageInput');
+const imageInputLabel = document.getElementById('imageInputLabel');
+const languageSelector = document.getElementById('languageSelector');
 
 let notes = JSON.parse(localStorage.getItem('notes')) || [];
+let editIndex = -1;
+let currentLanguage = languageSelector.value;
 
 function renderNotes(filter = '', categoryFilter = 'all') {
     notesList.innerHTML = '';
@@ -24,11 +28,25 @@ function renderNotes(filter = '', categoryFilter = 'all') {
                 img.src = note.image;
                 li.appendChild(img);
             }
+            const editButton = document.createElement('button');
+            editButton.innerHTML = `<i class="fas fa-edit"></i> ${translations[currentLanguage].edit}`;
+            editButton.addEventListener('click', () => {
+                editIndex = index;
+                noteInput.value = note.text;
+                categoryInput.value = note.category;
+                if (note.image) {
+                    const img = document.createElement('img');
+                    img.src = note.image;
+                    imageInput.files = [img];
+                }
+                addNoteButton.innerHTML = `<i class="fas fa-save"></i> ${translations[currentLanguage].save}`;
+            });
             const deleteButton = document.createElement('button');
-            deleteButton.innerHTML = '<i class="fas fa-trash"></i> Supprimer';
+            deleteButton.innerHTML = `<i class="fas fa-trash"></i> ${translations[currentLanguage].delete}`;
             deleteButton.addEventListener('click', () => {
                 deleteNote(index);
             });
+            li.appendChild(editButton);
             li.appendChild(deleteButton);
             notesList.appendChild(li);
         });
@@ -46,7 +64,13 @@ function addNote() {
                 category: noteCategory,
                 image: e.target.result
             };
-            notes.push(note);
+            if (editIndex >= 0) {
+                notes[editIndex] = note;
+                editIndex = -1;
+                addNoteButton.innerHTML = `<i class="fas fa-plus"></i> ${translations[currentLanguage].addNote}`;
+            } else {
+                notes.push(note);
+            }
             localStorage.setItem('notes', JSON.stringify(notes));
             noteInput.value = '';
             imageInput.value = '';
@@ -60,7 +84,13 @@ function addNote() {
                 category: noteCategory,
                 image: null
             };
-            notes.push(note);
+            if (editIndex >= 0) {
+                notes[editIndex] = note;
+                editIndex = -1;
+                addNoteButton.innerHTML = `<i class="fas fa-plus"></i> ${translations[currentLanguage].addNote}`;
+            } else {
+                notes.push(note);
+            }
             localStorage.setItem('notes', JSON.stringify(notes));
             noteInput.value = '';
             renderNotes();
@@ -101,6 +131,53 @@ function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
 }
 
+function applyTranslations(language) {
+    currentLanguage = language;
+    const elements = {
+        title: document.getElementById('title'),
+        warning: document.getElementById('warning'),
+        toggleDarkMode: document.getElementById('toggleDarkMode'),
+        searchInput: document.getElementById('searchInput'),
+        noteInput: document.getElementById('noteInput'),
+        addNote: document.getElementById('addNote'),
+        exportPDF: document.getElementById('exportPDF'),
+        exportText: document.getElementById('exportText'),
+        filterCategory: document.getElementById('filterCategory'),
+        categoryInput: document.getElementById('categoryInput'),
+        imageInputLabel: document.getElementById('imageInputLabel')
+    };
+
+    const translation = translations[language];
+
+    elements.title.textContent = translation.title;
+    elements.warning.textContent = translation.warning;
+    elements.toggleDarkMode.innerHTML = `<i class="fas fa-moon"></i> ${translation.darkMode}`;
+    elements.searchInput.placeholder = translation.searchPlaceholder;
+    elements.noteInput.placeholder = translation.notePlaceholder;
+    elements.addNote.innerHTML = `<i class="fas fa-plus"></i> ${translation.addNote}`;
+    elements.exportPDF.innerHTML = `<i class="fas fa-file-pdf"></i> ${translation.exportPDF}`;
+    elements.exportText.innerHTML = `<i class="fas fa-file-alt"></i> ${translation.exportText}`;
+    elements.imageInputLabel.innerHTML = `<i class="fas fa-upload"></i> ${translation.chooseImage}`;
+
+    const filterOptions = elements.filterCategory.options;
+    filterOptions[0].textContent = translation.allCategories;
+    filterOptions[1].textContent = translation.general;
+    filterOptions[2].textContent = translation.work;
+    filterOptions[3].textContent = translation.personal;
+
+    const categoryOptions = elements.categoryInput.options;
+    categoryOptions[0].textContent = translation.general;
+    categoryOptions[1].textContent = translation.work;
+    categoryOptions[2].textContent = translation.personal;
+
+    renderNotes(searchInput.value, filterCategory.value);
+}
+
+languageSelector.addEventListener('change', (event) => {
+    const selectedLanguage = event.target.value;
+    applyTranslations(selectedLanguage);
+});
+
 addNoteButton.addEventListener('click', addNote);
 searchInput.addEventListener('input', () => renderNotes(searchInput.value, filterCategory.value));
 filterCategory.addEventListener('change', () => renderNotes(searchInput.value, filterCategory.value));
@@ -108,3 +185,4 @@ exportPDFButton.addEventListener('click', exportNotesToPDF);
 exportTextButton.addEventListener('click', exportNotesToText);
 toggleDarkModeButton.addEventListener('click', toggleDarkMode);
 renderNotes();
+applyTranslations(languageSelector.value);

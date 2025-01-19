@@ -9,12 +9,17 @@
 </head>
 <body>
     <div class="notes-container">
-        <h1>Outil de prise de notes</h1>
-        <h4>ATTENTION : exporter vos notes avant d'arreter votre pc</h4>
+        <h1 id="title">Outil de prise de notes</h1>
+        <h4 id="warning">ATTENTION : exporter vos notes avant d'arreter votre pc</h4>
         <button id="toggleDarkMode"><i class="fas fa-moon"></i> Mode sombre</button>
+        <select id="languageSelector">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+        </select>
         <input type="text" id="searchInput" placeholder="Rechercher des notes...">
         <textarea id="noteInput" placeholder="Écrivez votre note ici..."></textarea>
-        <input type="file" id="imageInput" accept="image/*">
+        <input type="file" id="imageInput" accept="image/*" style="display: none;">
+        <label for="imageInput" id="imageInputLabel" class="file-label"><i class="fas fa-upload"></i> Choisir une photo</label>
         <select id="categoryInput">
             <option value="Général">Général</option>
             <option value="Travail">Travail</option>
@@ -32,6 +37,7 @@
         <ul id="notesList"></ul>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="translations.js"></script>
     <script src="notes.js"></script>
 </body>
 </html>

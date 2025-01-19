@@ -122,6 +122,31 @@ li button:hover {
     transform: scale(1.05);
 }
 
+.file-label {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #5cb85c;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.file-label i {
+    margin-right: 5px;
+}
+
+.file-label:hover {
+    background-color: #4cae4c;
+    transform: scale(1.05);
+}
+
 /* Styles pour le mode sombre */
 body.dark-mode {
     background-color: #121212;
