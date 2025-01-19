@@ -29,7 +29,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-input[type="text"], textarea, select {
+input[type="text"], textarea, select, input[type="file"] {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -87,10 +87,17 @@ li {
     border: 1px solid #ccc;
     border-radius: 5px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     animation: fadeIn 0.5s ease-in-out;
     transition: background-color 0.3s, color 0.3s;
+}
+
+li img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
 }
 
 li button {
@@ -103,6 +110,7 @@ li button {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
 }
 
 li button i {
@@ -127,7 +135,8 @@ body.dark-mode .notes-container {
 
 body.dark-mode input[type="text"],
 body.dark-mode textarea,
-body.dark-mode select {
+body.dark-mode select,
+body.dark-mode input[type="file"] {
     background-color: #333;
     color: #fff;
     border-color: #555;

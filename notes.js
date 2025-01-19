@@ -7,6 +7,7 @@ const exportPDFButton = document.getElementById('exportPDF');
 const exportTextButton = document.getElementById('exportText');
 const filterCategory = document.getElementById('filterCategory');
 const toggleDarkModeButton = document.getElementById('toggleDarkMode');
+const imageInput = document.getElementById('imageInput');
 
 let notes = JSON.parse(localStorage.getItem('notes')) || [];
 
@@ -18,6 +19,11 @@ function renderNotes(filter = '', categoryFilter = 'all') {
         .forEach((note, index) => {
             const li = document.createElement('li');
             li.innerHTML = `<span>${note.text} (${note.category})</span>`;
+            if (note.image) {
+                const img = document.createElement('img');
+                img.src = note.image;
+                li.appendChild(img);
+            }
             const deleteButton = document.createElement('button');
             deleteButton.innerHTML = '<i class="fas fa-trash"></i> Supprimer';
             deleteButton.addEventListener('click', () => {
@@ -31,11 +37,34 @@ function renderNotes(filter = '', categoryFilter = 'all') {
 function addNote() {
     const noteText = noteInput.value.trim();
     const noteCategory = categoryInput.value;
+    const noteImage = imageInput.files[0];
     if (noteText !== '') {
-        notes.push({ text: noteText, category: noteCategory });
-        localStorage.setItem('notes', JSON.stringify(notes));
-        noteInput.value = '';
-        renderNotes();
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const note = {
+                text: noteText,
+                category: noteCategory,
+                image: e.target.result
+            };
+            notes.push(note);
+            localStorage.setItem('notes', JSON.stringify(notes));
+            noteInput.value = '';
+            imageInput.value = '';
+            renderNotes();
+        };
+        if (noteImage) {
+            reader.readAsDataURL(noteImage);
+        } else {
+            const note = {
+                text: noteText,
+                category: noteCategory,
+                image: null
+            };
+            notes.push(note);
+            localStorage.setItem('notes', JSON.stringify(notes));
+            noteInput.value = '';
+            renderNotes();
+        }
     }
 }
 
