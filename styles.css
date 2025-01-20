@@ -47,3 +47,13 @@
 #next-question:hover {
     background-color: #4cae4c;
 }
+
+.correct {
+    background-color: #4caf50 !important;
+    color: white;
+}
+
+.incorrect {
+    background-color: #f44336 !important;
+    color: white;
+}
