@@ -35,4 +35,4 @@ const translations = {
         personal: "Personnel",
         chooseImage: "Choisir une photo"
     }
-};
+}; 
