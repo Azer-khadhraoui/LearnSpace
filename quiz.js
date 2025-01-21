@@ -14,6 +14,16 @@ const quizzes = [
             question: "Quel est le but principal du protocole HTTP ?",
             options: ["Transférer des fichiers", "Transférer des pages web", "Transférer des emails", "Transférer des vidéos"],
             correct: "Transférer des pages web"
+        },
+        {
+            question: "Quel est le langage de programmation utilisé pour le développement d'applications Android ?",
+            options: ["Swift", "Kotlin", "JavaScript", "Ruby"],
+            correct: "Kotlin"
+        },
+        {
+            question: "Quel est le langage de programmation principalement utilisé pour le développement côté serveur ?",
+            options: ["HTML", "CSS", "JavaScript", "PHP"],
+            correct: "PHP"
         }
     ],
     [
@@ -31,6 +41,16 @@ const quizzes = [
             question: "Quel est le but principal du langage SQL ?",
             options: ["Créer des sites web", "Gérer des bases de données", "Développer des applications mobiles", "Analyser des données"],
             correct: "Gérer des bases de données"
+        },
+        {
+            question: "Quel est le langage de programmation utilisé pour le développement d'applications iOS ?",
+            options: ["Swift", "Kotlin", "JavaScript", "Ruby"],
+            correct: "Swift"
+        },
+        {
+            question: "Quel est le langage de programmation principalement utilisé pour le développement de jeux vidéo ?",
+            options: ["Python", "C#", "JavaScript", "PHP"],
+            correct: "C#"
         }
     ],
     [
@@ -48,6 +68,16 @@ const quizzes = [
             question: "Quel est le but principal du langage JavaScript ?",
             options: ["Créer des sites web statiques", "Créer des sites web dynamiques", "Gérer des bases de données", "Analyser des données"],
             correct: "Créer des sites web dynamiques"
+        },
+        {
+            question: "Quel est le langage de programmation utilisé pour le développement de scripts côté serveur ?",
+            options: ["Python", "PHP", "JavaScript", "Ruby"],
+            correct: "PHP"
+        },
+        {
+            question: "Quel est le langage de programmation principalement utilisé pour le développement de l'intelligence artificielle ?",
+            options: ["Python", "C#", "JavaScript", "PHP"],
+            correct: "Python"
         }
     ]
 ];
