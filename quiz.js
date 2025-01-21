@@ -85,6 +85,9 @@ const quizzes = [
 let currentQuizIndex = 0;
 let currentQuestionIndex = 0;
 let score = 0;
+let points = 0;
+let level = 1;
+const badges = [];
 
 const quizTitle = document.getElementById('quiz-title');
 const quizQuestion = document.getElementById('quiz-question');
@@ -94,6 +97,10 @@ const returnToSelectionButton = document.getElementById('return-to-selection');
 const quizSelection = document.getElementById('quiz-selection');
 const quizContainer = document.getElementById('quiz-container');
 const toggleDarkModeButton = document.getElementById('toggle-dark-mode');
+const pointsDisplay = document.getElementById('points');
+const levelDisplay = document.getElementById('level');
+const badgeList = document.getElementById('badge-list');
+const gamificationSection = document.getElementById('gamification');
 
 function startQuiz(quizIndex) {
     currentQuizIndex = quizIndex;
@@ -101,6 +108,7 @@ function startQuiz(quizIndex) {
     score = 0;
     quizSelection.style.display = 'none';
     quizContainer.style.display = 'block';
+    gamificationSection.style.display = 'none';
     loadQuestion();
 }
 
@@ -123,6 +131,8 @@ function selectOption(button, selectedOption) {
     if (selectedOption === currentQuestion.correct) {
         button.classList.add('correct');
         score++;
+        points += 10; 
+        updateGamification();
     } else {
         button.classList.add('incorrect');
     }
@@ -146,15 +156,47 @@ function showResults() {
     quizOptions.innerHTML = '';
     nextQuestionButton.style.display = 'none';
     returnToSelectionButton.style.display = 'block';
+    gamificationSection.style.display = 'block';
+    checkLevelUp();
+    checkBadges();
 }
 
 function returnToSelection() {
     quizContainer.style.display = 'none';
     quizSelection.style.display = 'block';
+    gamificationSection.style.display = 'none';
 }
 
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
+}
+
+function updateGamification() {
+    pointsDisplay.textContent = `Points: ${points}`;
+    levelDisplay.textContent = `Niveau: ${level}`;
+}
+
+function checkLevelUp() {
+    const newLevel = Math.floor(points / 100) + 1;
+    if (newLevel > level) {
+        level = newLevel;
+        updateGamification();
+    }
+}
+
+function checkBadges() {
+    if (score === quizzes[currentQuizIndex].length) {
+        addBadge("Quiz Master");
+    }
+}
+
+function addBadge(badgeName) {
+    if (!badges.includes(badgeName)) {
+        badges.push(badgeName);
+        const badgeItem = document.createElement('li');
+        badgeItem.textContent = badgeName;
+        badgeList.appendChild(badgeItem);
+    }
 }
 
 nextQuestionButton.addEventListener('click', () => {

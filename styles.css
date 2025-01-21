@@ -87,3 +87,21 @@ body {
 .dark-mode #next-question:hover {
     background-color: #555;
 }
+
+#gamification {
+    margin-top: 20px;
+}
+
+#badges ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#badges li {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
