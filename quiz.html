@@ -9,11 +9,17 @@
 <body>
     <div class="container">
         <h1 id="title">Plateforme Éducative</h1>
-        <div id="quiz-container">
+        <div id="quiz-selection">
+            <h2>Sélectionnez un quiz</h2>
+            <button onclick="startQuiz(0)">Quiz 1</button>
+            <button onclick="startQuiz(1)">Quiz 2</button>
+            <button onclick="startQuiz(2)">Quiz 3</button>
+        </div>
+        <div id="quiz-container" style="display: none;">
             <h2 id="quiz-title">Quiz</h2>
             <div id="quiz-question"></div>
             <div id="quiz-options"></div>
-            <button id="next-question">Suivant</button>
+            <button id="next-question" style="display: none;">Suivant</button>
         </div>
     </div>
     <script src="quiz.js"></script>
