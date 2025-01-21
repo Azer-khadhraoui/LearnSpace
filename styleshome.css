@@ -1,40 +1,71 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #74fc9c;
+    color: #17ad30;
     transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .container {
-    width: 60%;
-    margin: 0 auto;
+    width: 80%;
+    max-width: 800px;
     padding: 20px;
     text-align: center;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 20px;
+    color: #2c5037;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 button {
-    padding: 10px 20px;
-    margin: 10px;
+    padding: 15px 30px;
+    margin: 15px;
     cursor: pointer;
     border: none;
-    border-radius: 5px;
-    background-color: #5cb85c;
+    border-radius: 10px;
+    background-color: #0ea03a;
     color: #fff;
-    font-size: 1em;
-    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-    background-color: #4cae4c;
-    transform: scale(1.05);
+    background-color: #047a31;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button i {
+    margin-right: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#home-selection h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #34495e;
 }
 
 #calculator {
