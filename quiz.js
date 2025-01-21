@@ -60,6 +60,7 @@ const quizTitle = document.getElementById('quiz-title');
 const quizQuestion = document.getElementById('quiz-question');
 const quizOptions = document.getElementById('quiz-options');
 const nextQuestionButton = document.getElementById('next-question');
+const returnToSelectionButton = document.getElementById('return-to-selection');
 const quizSelection = document.getElementById('quiz-selection');
 const quizContainer = document.getElementById('quiz-container');
 
@@ -83,6 +84,7 @@ function loadQuestion() {
         quizOptions.appendChild(button);
     });
     nextQuestionButton.style.display = 'none';
+    returnToSelectionButton.style.display = 'none';
 }
 
 function selectOption(button, selectedOption) {
@@ -112,6 +114,12 @@ function showResults() {
     quizQuestion.textContent = `Vous avez obtenu ${score} sur ${quizzes[currentQuizIndex].length} bonnes réponses.`;
     quizOptions.innerHTML = '';
     nextQuestionButton.style.display = 'none';
+    returnToSelectionButton.style.display = 'block';
+}
+
+function returnToSelection() {
+    quizContainer.style.display = 'none';
+    quizSelection.style.display = 'block';
 }
 
 nextQuestionButton.addEventListener('click', () => {
