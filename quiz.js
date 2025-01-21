@@ -188,6 +188,18 @@ function checkBadges() {
     if (score === quizzes[currentQuizIndex].length) {
         addBadge("Quiz Master");
     }
+    if (points <= 30) {
+        addBadge("Débutant");
+    }
+    if (points <= 80 && points > 30) {
+        addBadge("Intermédiaire");
+    }
+    if (points <= 120 && points > 80) {
+        addBadge("Avancé");
+    }
+    if (points > 120) {
+        addBadge("Expert");
+    }
 }
 
 function addBadge(badgeName) {
