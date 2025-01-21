@@ -1,3 +1,10 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
 .container {
     width: 50%;
     margin: 0 auto;
@@ -56,4 +63,27 @@
 .incorrect {
     background-color: #f44336 !important;
     color: white;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+.dark-mode #quiz-options button {
+    background-color: #555;
+    color: #f9f9f9;
+}
+
+.dark-mode #quiz-options button:hover {
+    background-color: #666;
+}
+
+.dark-mode #next-question {
+    background-color: #444;
+    color: #f9f9f9;
+}
+
+.dark-mode #next-question:hover {
+    background-color: #555;
 }

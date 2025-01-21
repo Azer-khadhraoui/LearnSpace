@@ -93,6 +93,7 @@ const nextQuestionButton = document.getElementById('next-question');
 const returnToSelectionButton = document.getElementById('return-to-selection');
 const quizSelection = document.getElementById('quiz-selection');
 const quizContainer = document.getElementById('quiz-container');
+const toggleDarkModeButton = document.getElementById('toggle-dark-mode');
 
 function startQuiz(quizIndex) {
     currentQuizIndex = quizIndex;
@@ -152,6 +153,10 @@ function returnToSelection() {
     quizSelection.style.display = 'block';
 }
 
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+
 nextQuestionButton.addEventListener('click', () => {
     currentQuestionIndex++;
     if (currentQuestionIndex < quizzes[currentQuizIndex].length) {
@@ -161,3 +166,5 @@ nextQuestionButton.addEventListener('click', () => {
         showResults();
     }
 });
+
+toggleDarkModeButton.addEventListener('click', toggleDarkMode);
