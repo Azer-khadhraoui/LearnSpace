@@ -1,7 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
+    background-color: #8ef1a7;
+    color: #17ad30;
     transition: background-color 0.3s, color 0.3s;
     display: flex;
     justify-content: center;
@@ -24,7 +24,7 @@ body {
 h1 {
     font-size: 3em;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #2c5037;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -34,7 +34,7 @@ button {
     cursor: pointer;
     border: none;
     border-radius: 10px;
-    background-color: #3498db;
+    background-color: #17ad30;
     color: #fff;
     font-size: 1.2em;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -42,7 +42,7 @@ button {
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #0e7a20;
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -64,6 +64,7 @@ button i {
 
 #games-container {
     display: flex;
+    
     flex-direction: column;
     align-items: center;
 }
@@ -71,6 +72,7 @@ button i {
 /* Styles pour le jeu de mémoire */
 #memory-cards-container {
     display: grid;
+    color: #fff;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     margin-top: 20px;
@@ -79,7 +81,7 @@ button i {
 .memory-card {
     width: 100px;
     height: 150px;
-    background-color: #3498db;
+    background-color: #01f329;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -101,7 +103,7 @@ button i {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #2980b9;
+    background-color: #0e7a20;
     border-radius: 10px;
     backface-visibility: hidden;
 }
@@ -112,7 +114,6 @@ button i {
     width: 100%;
     height: 100%;
     display: flex;
-    background-color: #114f79;
     justify-content: center;
     align-items: center;
     backface-visibility: hidden;
