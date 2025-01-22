@@ -170,3 +170,83 @@ function showGamesContainer() {
 }
 
 window.addEventListener('load', loadMathGameState);
+
+// Jeu de devinettes de mots
+let wordToGuess = '';
+let guessedLetters = [];
+let remainingAttempts = 6;
+
+function startWordGuessGame() {
+    const wordGuessGameContainer = document.createElement('div');
+    wordGuessGameContainer.id = 'word-guess-game-container';
+    wordGuessGameContainer.innerHTML = `
+        <h2>Jeu de devinettes de mots</h2>
+        <div id="word-to-guess-container"></div>
+        <div id="guessed-letters-container"></div>
+        <div id="remaining-attempts-container"></div>
+        <input type="text" id="letter-input" maxlength="1" placeholder="Entrez une lettre">
+        <button onclick="guessLetter()">Deviner</button>
+        <button onclick="resetWordGuessGame()">Réinitialiser le jeu</button>
+        <button onclick="showGamesContainer()"><i class="fas fa-arrow-left"></i> Retour aux jeux</button>
+    `;
+    document.body.innerHTML = '';
+    document.body.appendChild(wordGuessGameContainer);
+    initializeWordGuessGame();
+}
+
+function initializeWordGuessGame() {
+    const words = ['javascript', 'html', 'css', 'python', 'java'];
+    wordToGuess = words[Math.floor(Math.random() * words.length)];
+    guessedLetters = [];
+    remainingAttempts = 6;
+    updateWordToGuessContainer();
+    updateGuessedLettersContainer();
+    updateRemainingAttemptsContainer();
+}
+
+function updateWordToGuessContainer() {
+    const wordToGuessContainer = document.getElementById('word-to-guess-container');
+    wordToGuessContainer.textContent = wordToGuess.split('').map(letter => (guessedLetters.includes(letter) ? letter : '_')).join(' ');
+}
+
+function updateGuessedLettersContainer() {
+    const guessedLettersContainer = document.getElementById('guessed-letters-container');
+    guessedLettersContainer.textContent = `Lettres devinées : ${guessedLetters.join(', ')}`;
+}
+
+function updateRemainingAttemptsContainer() {
+    const remainingAttemptsContainer = document.getElementById('remaining-attempts-container');
+    remainingAttemptsContainer.textContent = `Tentatives restantes : ${remainingAttempts}`;
+}
+
+function guessLetter() {
+    const letterInput = document.getElementById('letter-input');
+    const guessedLetter = letterInput.value.toLowerCase();
+    letterInput.value = '';
+
+    if (!guessedLetter || guessedLetters.includes(guessedLetter)) {
+        return;
+    }
+
+    guessedLetters.push(guessedLetter);
+
+    if (!wordToGuess.includes(guessedLetter)) {
+        remainingAttempts--;
+    }
+
+    updateWordToGuessContainer();
+    updateGuessedLettersContainer();
+    updateRemainingAttemptsContainer();
+
+    if (remainingAttempts === 0) {
+        alert(`Vous avez perdu ! Le mot était : ${wordToGuess}`);
+        resetWordGuessGame();
+    } else if (wordToGuess.split('').every(letter => guessedLetters.includes(letter))) {
+        alert('Félicitations ! Vous avez deviné le mot !');
+        resetWordGuessGame();
+    }
+}
+
+function resetWordGuessGame() {
+    initializeWordGuessGame();
+}
