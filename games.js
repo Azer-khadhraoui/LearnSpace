@@ -29,6 +29,7 @@ function initializeMemoryGame() {
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
+let matchedPairs = 0;
 
 function flipCard() {
     if (lockBoard) return;
@@ -54,6 +55,12 @@ function checkForMatch() {
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
+    matchedPairs++;
+    if (matchedPairs === 4) {
+        setTimeout(() => {
+            alert('Félicitations ! Vous avez gagné !');
+        }, 500);
+    }
     resetBoard();
 }
 
@@ -63,7 +70,7 @@ function unflipCards() {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
         resetBoard();
-    }, 1500);
+    }, 1500); // Temps pendant lequel les cartes restent révélées
 }
 
 function resetBoard() {
@@ -73,6 +80,7 @@ function resetBoard() {
 
 function resetMemoryGame() {
     document.getElementById('memory-cards-container').innerHTML = '';
+    matchedPairs = 0;
     initializeMemoryGame();
 }
 
