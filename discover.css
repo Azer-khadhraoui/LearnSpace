@@ -1,13 +1,14 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f8ff;
+    background-color: #a0d0a0; 
     color: #333;
     transition: background-color 0.3s, color 0.3s;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; 
     height: 100vh;
     margin: 0;
+    padding-top: 20px; 
 }
 
 .container {
@@ -24,12 +25,12 @@ body {
 h1 {
     font-size: 3em;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #2c5036;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h2, h3 {
-    color: #2c3e50;
+    color: #2c5031;
     margin-top: 30px;
 }
 
@@ -72,7 +73,7 @@ button {
     cursor: pointer;
     border: none;
     border-radius: 10px;
-    background-color: #3498db;
+    background-color: #43ea34;
     color: #fff;
     font-size: 1.2em;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -80,13 +81,28 @@ button {
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #008f30;
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 button i {
     margin-right: 10px;
+}
+
+#tutorial-links {
+    margin-top: 30px;
+}
+
+#tutorial-links a {
+    color: #34db47;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#tutorial-links a:hover {
+    color: #008372;
 }
 
 @keyframes fadeIn {
