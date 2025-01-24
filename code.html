@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éditeur de Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <link rel="stylesheet" href="code.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Éditeur de Code</h1>
+        <textarea id="code" name="code"></textarea>
+        <button onclick="runCode()">Exécuter le Code</button>
+        <pre id="output"></pre>
+        <button onclick="location.href='index.html'"><i class="fas fa-arrow-left"></i> Retour à la page principale</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+    <script src="code-editor.js"></script>
+</body>
+</html>
