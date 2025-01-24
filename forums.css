@@ -25,13 +25,30 @@ body {
 h1 {
     font-size: 3em;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #2c5035;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h2, h3 {
-    color: #2c3e50;
+h2 {
+    font-size: 2.5em;
+    color: #30502c;
     margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #2c5037;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 2em;
+    color: #2c5033;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #2c5034;
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
 ul {
@@ -44,17 +61,36 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.news-image {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.news-date {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
 }
 
 a {
-    color: #34db42;
+    color: #3498db;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #29b95b;
+    color: #2980b9;
 }
 
 button {
@@ -63,7 +99,7 @@ button {
     cursor: pointer;
     border: none;
     border-radius: 10px;
-    background-color: #34db9b;
+    background-color: #3498db;
     color: #fff;
     font-size: 1.2em;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -71,13 +107,20 @@ button {
 }
 
 button:hover {
-    background-color: #29b92e;
+    background-color: #2980b9;
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 button i {
     margin-right: 10px;
+}
+.news-image {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 @keyframes fadeIn {
