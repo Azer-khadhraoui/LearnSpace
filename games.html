@@ -12,8 +12,20 @@
         <div id="games-container">
             <h2>Choisissez un jeu</h2>
             <button onclick="startMemoryGame()">Jeu de mémoire</button>
-            <button onclick="startMathGame()">Jeu de mathématiques</button>
+            <button onclick="startMathInfoGame()">Jeu de mathématiques informatique</button>
             <button onclick="startWordGuessGame()">Jeu de devinettes de mots</button>
+        </div>
+        <div id="math-info-game" style="display: none;">
+            <h2>Jeu de Mathématiques Informatique</h2>
+            <button id="start-math-info-game">Commencer le Jeu</button>
+            <div id="math-info-question-container">
+                <p id="math-info-question"></p>
+                <input type="text" id="math-info-answer" placeholder="Votre réponse">
+                <button id="submit-info-answer">Soumettre</button>
+                <p id="math-info-result"></p>
+                <p id="math-info-score">Score: 0</p>
+            </div>
+            <button onclick="showGamesContainer()"><i class="fas fa-arrow-left"></i> Retour aux jeux</button>
         </div>
         <button onclick="location.href='index.html'"><i class="fas fa-arrow-left"></i> Retour à la page principale</button>
     </div>
