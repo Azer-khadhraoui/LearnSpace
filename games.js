@@ -296,6 +296,50 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             question: "Quel est le résultat de 10 // 3?",
             answer: "3"
+        },
+        {
+            question: "Convertir 1101 en décimal",
+            answer: "13"
+        },
+        {
+            question: "Convertir 2F en décimal (hexadécimal)",
+            answer: "47"
+        },
+        {
+            question: "Quel est le résultat de 1101 AND 1011 en binaire?",
+            answer: "1001"
+        },
+        {
+            question: "Quel est le résultat de 1101 OR 1011 en binaire?",
+            answer: "1111"
+        },
+        {
+            question: "Convertir 3C en décimal (hexadécimal)",
+            answer: "60"
+        },
+        {
+            question: "Convertir 101 en décimal",
+            answer: "5"
+        },
+        {
+            question: "Convertir 7F en décimal (hexadécimal)",
+            answer: "127"
+        },
+        {
+            question: "Quel est le résultat de 1111 AND 0110 en binaire?",
+            answer: "0110"
+        },
+        {
+            question: "Quel est le résultat de 1111 OR 0110 en binaire?",
+            answer: "1111"
+        },
+        {
+            question: "Convertir 1001 en décimal",
+            answer: "9"
+        },
+        {
+            question: "Convertir 4B en décimal (hexadécimal)",
+            answer: "75"
         }
     ];
 
