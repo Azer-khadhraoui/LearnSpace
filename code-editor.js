@@ -47,6 +47,35 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // Fonction pour réinitialiser le code
+    window.resetCode = function() {
+        editor.setValue('');
+    };
+
+    // Fonction pour télécharger le code
+    window.downloadCode = function() {
+        const code = editor.getValue();
+        const blob = new Blob([code], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'code.js';
+        a.click();
+        URL.revokeObjectURL(url);
+    };
+
+    // Fonction pour charger du code à partir d'un fichier
+    window.uploadCode = function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                editor.setValue(e.target.result);
+            };
+            reader.readAsText(file);
+        }
+    };
+
     // Fonction pour changer le thème
     window.changeTheme = function(theme) {
         editor.setOption('theme', theme);
