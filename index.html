@@ -6,10 +6,26 @@
     <title>Plateforme Éducative</title>
     <link rel="stylesheet" href="styleshome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="navbar-brand">Plateforme Éducative</h1>
+            <ul class="navbar-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="calculator.html"><i class="fas fa-calculator"></i> Calculatrice</a></li>
+                <li><a href="notes.html"><i class="fas fa-sticky-note"></i> Notes</a></li>
+                <li><a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                <li><a href="games.html"><i class="fas fa-gamepad"></i> Jeux éducatifs</a></li>
+                <li><a href="discover.html"><i class="fas fa-laptop-code"></i> Découvrir l'informatique</a></li>
+                <li><a href="forums.html"><i class="fas fa-newspaper"></i> Nouveautés en Informatique</a></li>
+                <li><a href="code.html"><i class="fas fa-code"></i> Éditeur de Code</a></li>
+            </ul>
+        </div>
+    </nav>
+  
     <div class="container">
-        <h1 id="title">Plateforme Éducative</h1>
         <div id="home-selection">
             <h2>Choisissez une fonctionnalité</h2>
             <button onclick="location.href='calculator.html'"><i class="fas fa-calculator"></i> Calculatrice</button>
@@ -20,6 +36,18 @@
             <button onclick="location.href='forums.html'"><i class="fas fa-newspaper"></i> Nouveautés en Informatique</button>
             <button onclick="location.href='code.html'"><i class="fas fa-code"></i> Éditeur de Code</button>
         </div>
+        <div id="qrcode" class="qrcode-container"></div>
     </div>
+    <script>
+        // Générer un QR code pour la page de contact
+        new QRCode(document.getElementById("qrcode"), {
+            text: "https://votre-site.com/contact.html",
+            width: 128,
+            height: 128,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+    </script>
 </body>
 </html>

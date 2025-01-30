@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous</title>
+    <link rel="stylesheet" href="styleshome.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="navbar-brand">Plateforme Éducative</h1>
+            <ul class="navbar-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="calculator.html"><i class="fas fa-calculator"></i> Calculatrice</a></li>
+                <li><a href="notes.html"><i class="fas fa-sticky-note"></i> Notes</a></li>
+                <li><a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                <li><a href="games.html"><i class="fas fa-gamepad"></i> Jeux éducatifs</a></li>
+                <li><a href="discover.html"><i class="fas fa-laptop-code"></i> Découvrir l'informatique</a></li>
+                <li><a href="forums.html"><i class="fas fa-newspaper"></i> Nouveautés en Informatique</a></li>
+                <li><a href="code.html"><i class="fas fa-code"></i> Éditeur de Code</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Contactez-nous</h2>
+        <form action="submit_contact_form.php" method="post">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+</body>
+</html>

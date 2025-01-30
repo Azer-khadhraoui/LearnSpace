@@ -1,31 +1,79 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #74fc9c;
-    color: #17ad30;
-    transition: background-color 0.3s, color 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #f0f0f0;
+    color: #333;
     margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #2c5031; /* Couleur verte */
+    color: #ecf0f1;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-brand {
+    font-size: 1.8em;
+    margin: 0;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: #a0d0a0;
 }
 
 .container {
-    width: 80%;
-    max-width: 800px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 100px auto 20px auto; /* Adjusted margin to account for fixed navbar */
     padding: 20px;
-    text-align: center;
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    animation: fadeIn 1s ease-in-out;
 }
 
 h1 {
     font-size: 3em;
     margin-bottom: 20px;
-    color: #2c5037;
+    color: #2c5031;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2c5031;
+    margin-bottom: 20px;
 }
 
 button {
@@ -34,7 +82,7 @@ button {
     cursor: pointer;
     border: none;
     border-radius: 10px;
-    background-color: #0ea03a;
+    background-color: #2c5031;
     color: #fff;
     font-size: 1.2em;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -42,7 +90,7 @@ button {
 }
 
 button:hover {
-    background-color: #047a31;
+    background-color: #1a3521;
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -122,4 +170,43 @@ button i {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
+}
+
+.image-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.qrcode-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    align-self: flex-start;
 }
