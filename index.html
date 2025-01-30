@@ -38,13 +38,27 @@
         </div>
         <div class="qrcode-container">
             <p>Pour nous contacter, scannez :</p>
-            <div id="qrcode"></div>
+            <div id="qrcode1"></div>
+        </div>
+        <div class="qrcode-container">
+            <p>Pour accéder au site depuis votre téléphone, scannez :</p>
+            <div id="qrcode2"></div>
         </div>
     </div>
     <script>
-        // Générer un QR code pour le profil Facebook
-        new QRCode(document.getElementById("qrcode"), {
+        // Générer un QR code pour un fichier PDF ou une capture d'écran sur localhost
+        new QRCode(document.getElementById("qrcode1"), {
             text: "https://www.facebook.com/profile.php?id=100008885132622", 
+            width: 128,
+            height: 128,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+
+        // Générer un QR code pour accéder au site depuis le téléphone
+        new QRCode(document.getElementById("qrcode2"), {
+            text: "http://192.168.100.14/LearnSpace/index.html",
             width: 128,
             height: 128,
             colorDark : "#000000",
