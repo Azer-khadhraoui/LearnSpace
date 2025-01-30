@@ -36,12 +36,15 @@
             <button onclick="location.href='forums.html'"><i class="fas fa-newspaper"></i> Nouveautés en Informatique</button>
             <button onclick="location.href='code.html'"><i class="fas fa-code"></i> Éditeur de Code</button>
         </div>
-        <div id="qrcode" class="qrcode-container"></div>
+        <div class="qrcode-container">
+            <p>Pour nous contacter, scannez :</p>
+            <div id="qrcode"></div>
+        </div>
     </div>
     <script>
-        // Générer un QR code pour la page de contact
+        // Générer un QR code pour le profil Facebook
         new QRCode(document.getElementById("qrcode"), {
-            text: "https://votre-site.com/contact.html",
+            text: "https://www.facebook.com/profile.php?id=100008885132622", 
             width: 128,
             height: 128,
             colorDark : "#000000",
