@@ -281,3 +281,15 @@ social-links a:hover {
     border-color: #f5c6cb !important;
     color: #721c24 !important;
 }
+#score-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#score-container h3 {
+    margin: 0;
+    color: #2c5031;
+}
