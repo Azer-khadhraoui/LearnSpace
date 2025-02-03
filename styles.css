@@ -5,14 +5,16 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Styles pour le conteneur principal */
 .container {
-    width: 60%;
-    margin: 0 auto;
+    width: 90%;
+    max-width: 1000px;
+    margin: 100px auto 20px auto; /* Adjusted margin to account for fixed navbar */
     padding: 20px;
-    text-align: center;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center; /* Centrer le texte dans le conteneur */
 }
 
 h1 {
@@ -82,6 +84,7 @@ button:hover {
     color: white;
 }
 
+
 .incorrect {
     background-color: #f44336 !important;
     color: white;
@@ -126,4 +129,85 @@ button:hover {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
+}
+
+.nav-button {
+    padding: 15px 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #17ad30;
+    color: #fff;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.nav-button:hover {
+    background-color: #128a23;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button i {
+    margin-right: 10px;
+}
+
+/* Styles pour la barre de navigation */
+.navbar {
+    background-color: #09e727; /* Couleur verte */
+    color: #19d360; /* Couleur du texte */
+    padding: 15px 0; /* Augmenter le padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between; /* Centrer les éléments flexibles */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Ajuster le padding horizontal */
+}
+
+.navbar-brand {
+    font-size: 1.8em; /* Augmenter la taille de la police */
+    margin: 0;
+    font-weight: bold;
+    color: #17d806; /* Couleur du texte */
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centrer les éléments flexibles */
+    flex-grow: 1;
+}
+
+.navbar-menu li {
+    margin-left: 20px; /* Augmenter la marge gauche */
+}
+
+.navbar-menu a {
+    color: #06f54d; /* Couleur du texte */
+    text-decoration: none;
+    font-size: 1em; /* Augmenter la taille de la police */
+    transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: #a0d0a0; /* Couleur au survol */
+}
+
+/* Styles pour les icônes dans les boutons de navigation */
+.nav-button i {
+    margin-right: 10px;
 }
