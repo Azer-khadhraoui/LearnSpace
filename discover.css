@@ -1,49 +1,97 @@
+/* Styles généraux */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #a0d0a0; 
+    background-color: #f0f0f0;
     color: #333;
-    transition: background-color 0.3s, color 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; 
-    height: 100vh;
     margin: 0;
-    padding-top: 20px; 
+    padding: 0;
+}
+
+.navbar {
+    background-color: #09e727; /* Couleur verte */
+    color: #0dbb16; /* Couleur du texte */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-brand {
+    font-size: 1.8em;
+    margin: 0;
+    font-weight: bold;
+    color: #0bc038; /* Couleur du texte */
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu a {
+    color: #07d422; /* Couleur du texte */
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: #a0d0a0; /* Couleur au survol */
 }
 
 .container {
     width: 90%;
     max-width: 1000px;
+    margin: 100px auto 20px auto; /* Adjusted margin to account for fixed navbar */
     padding: 20px;
-    text-align: center;
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    animation: fadeIn 1s ease-in-out;
+    text-align: center; /* Centrer le texte dans le conteneur */
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 20px;
-    color: #2c5036;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    color: #2c5031;
 }
 
-h2, h3 {
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
     color: #2c5031;
-    margin-top: 30px;
+}
+
+h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #2c5031;
 }
 
 ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
-li {
-    margin: 40px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+ul li {
+    margin-bottom: 20px;
 }
 
 iframe {
@@ -52,19 +100,23 @@ iframe {
     height: 315px;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-iframe:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 p {
-    margin-top: 10px;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #333;
+    margin-top: 10px;
+}
+
+a {
+    color: #09e727;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #07b11e;
 }
 
 button {
