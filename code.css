@@ -1,32 +1,78 @@
+/* Styles généraux */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #a0d0a0; 
+    background-color: #f0f0f0;
     color: #333;
-    transition: background-color 0.3s, color 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; 
-    height: 100vh;
     margin: 0;
-    padding-top: 20px; 
+    padding: 0;
+}
+
+.navbar {
+    background-color: #09e727; /* Couleur verte */
+    color: #ffffff; /* Couleur du texte */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-brand {
+    font-size: 1.8em;
+    margin: 0;
+    font-weight: bold;
+    color: #0bc038; /* Couleur du texte */
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu a {
+    color: #0ac539; /* Couleur du texte */
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: #a0d0a0; /* Couleur au survol */
 }
 
 .container {
     width: 90%;
     max-width: 1000px;
+    margin: 100px auto 20px auto; /* Adjusted margin to account for fixed navbar */
     padding: 20px;
-    text-align: center;
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    animation: fadeIn 1s ease-in-out;
+    text-align: center;
+
+   
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 20px;
     color: #2c5031;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .options {
@@ -55,6 +101,21 @@ h1 {
 textarea {
     width: 100%;
     height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f9f9f9;
+    color: #333;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+textarea:focus {
+    outline: none;
+    background-color: #fff;
+    color: #000;
 }
 
 button {
@@ -71,32 +132,54 @@ button {
 }
 
 button:hover {
-    background-color: #1e3521;
+    background-color: #1a3521;
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-pre {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-button i {
+.nav-button {
+    padding: 15px 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #17ad30;
+    color: #fff;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.nav-button:hover {
+    background-color: #128a23;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button i {
     margin-right: 10px;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+pre#output {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f9f9f9;
+    color: #333;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
