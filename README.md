@@ -46,8 +46,8 @@ LearnSpace est développé avec les technologies suivantes :
    ```  
 2. **Ouvrez `index.html` dans votre navigateur** pour tester l'application.  
 
-## **💡 Contribution**  
-Les contributions sont les bienvenues ! Si vous souhaitez améliorer **LearnSpace**, n’hésitez pas à proposer des suggestions ou à soumettre des **pull requests**.  
+## **💡 Live Demo**  
+[(https://azer-khadhraoui.github.io/LearnSpace/)  ](https://azer-khadhraoui.github.io/LearnSpace/) 
 
   
 
