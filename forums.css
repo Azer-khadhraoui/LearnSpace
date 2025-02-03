@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #a0d0a0; 
+    background-color: #f0f0f0; 
     color: #333;
     transition: background-color 0.3s, color 0.3s;
     display: flex;
@@ -9,6 +9,58 @@ body {
     height: 100vh;
     margin: 0;
     padding-top: 20px; 
+}
+
+/* Styles pour la barre de navigation */
+.navbar {
+    background-color: #09e727; /* Couleur verte */
+    color: #ffffff; /* Couleur du texte */
+    padding: 5px 0; /* Réduire le padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between; /* Centrer les éléments flexibles */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1px; /* Réduire le padding horizontal */
+}
+
+.navbar-brand {
+    font-size: 1.5em; /* Réduire la taille de la police */
+    margin: 0;
+    font-weight: bold;
+    color: #08c938; /* Couleur du texte */
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centrer les éléments flexibles */
+    flex-grow: 1;
+}
+
+.navbar-menu li {
+    margin-left: 10px; /* Réduire la marge gauche */
+}
+
+.navbar-menu a {
+    color: #12c03d; /* Couleur du texte */
+    text-decoration: none;
+    font-size: 0.8em; /* Réduire la taille de la police */
+    transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: #a0d0a0; /* Couleur au survol */
 }
 
 .container {

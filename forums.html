@@ -5,8 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nouveautés en Informatique</title>
     <link rel="stylesheet" href="forums.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="navbar-brand">Plateforme Éducative</h1>
+            <ul class="navbar-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="calculator.html"><i class="fas fa-calculator"></i> Calculatrice</a></li>
+                <li><a href="notes.html"><i class="fas fa-sticky-note"></i> Notes</a></li>
+                <li><a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                <li><a href="games.html"><i class="fas fa-gamepad"></i> Jeux éducatifs</a></li>
+                <li><a href="discover.html"><i class="fas fa-laptop-code"></i> Découvrir l'informatique</a></li>
+                <li><a href="forums.html"><i class="fas fa-newspaper"></i> Nouveautés en Informatique</a></li>
+                <li><a href="code.html"><i class="fas fa-code"></i> Éditeur de Code</a></li>
+                <li><a href="test.html"><i class="fas fa-question"></i> Test</a></li>
+            </ul>
+        </div>
+    </nav>
+    
     <div class="container">
         <h1>Nouveautés en Informatique</h1>
         <div id="news-container">
@@ -46,9 +64,9 @@
                     <img src="cs.png" alt="Cybersécurité" class="news-image">
                     <h3>Cybersécurité</h3>
                     <p>Les dernières nouvelles en cybersécurité, y compris les nouvelles menaces et les meilleures pratiques pour se protéger.</p>
-                    <a href="https://www.sealpath.com/fr/blog/2024-tendances-cybersecurite-experts/" target="_blank">Lire plus</a>
+                    <a href="https://www.cybersecurity.com/news" target="_blank">Lire plus</a>
                     <div class="share">
-                        <button onclick="shareOnFacebook('https://www.sealpath.com/fr/blog/2024-tendances-cybersecurite-experts/')">Partager sur Facebook</button>
+                        <button onclick="shareOnFacebook('https://www.cybersecurity.com/news')">Partager sur Facebook</button>
                     </div>
                     <div class="comments">
                         <h4>Commentaires</h4>
@@ -59,7 +77,6 @@
                 </li>
             </ul>
         </div>
-        <button onclick="location.href='index.html'"><i class="fas fa-arrow-left"></i> Retour à la page principale</button>
     </div>
     <script src="scripts.js"></script>
 </body>
