@@ -1,58 +1,155 @@
-.calculator {
-    width: 350px;
-    margin: 100px auto;
+/* Styles généraux */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #09e727; /* Couleur verte */
+    color: #07a51c; /* Couleur du texte */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-brand {
+    font-size: 1.8em;
+    margin: 0;
+    font-weight: bold;
+    color: #0bc038; /* Couleur du texte */
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu a {
+    color: #06b43a; /* Couleur du texte */
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: #a0d0a0; /* Couleur au survol */
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 20px auto; /* Adjusted margin to account for fixed navbar */
     padding: 20px;
-    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center; /* Centrer le texte dans le conteneur */
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #2c5031;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 400px;
+    background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    padding: 20px;
 }
+
 .display {
     width: 100%;
     height: 50px;
-    text-align: right;
-    margin-bottom: 10px;
-    padding: 5px;
-    font-size: 24px;
+    background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #fff;
+    font-size: 1.5em;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
 }
+
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
+
 .button {
-    padding: 20px;
-    font-size: 18px;
-    cursor: pointer;
-    text-align: center;
-    border: 1px solid #ccc;
+    background-color: #00be19;
+    color: #fff;
+    border: none;
     border-radius: 5px;
-    background-color: #e0e0e0;
-    transition: background-color 0.3s, transform 0.3s;
+    padding: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+
 .button:hover {
-    background-color: #d0d0d0;
-    transform: scale(1.05);
+    background-color: #1a3521;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 .button.operator {
-    background-color: #f0ad4e;
-    color: #fff;
+    background-color: #09e727;
 }
+
+.button.operator:hover {
+    background-color: #07b11e;
+}
+
+.button.clear, .button.clear-entry, .button.delete {
+    background-color: #e74c3c;
+}
+
+.button.clear:hover, .button.clear-entry:hover, .button.delete:hover {
+    background-color: #c0392b;
+}
+
 .button.equal {
-    background-color: #5cb85c;
-    color: #fff;
-    grid-column: span 4;
+    background-color: #f39c12;
+    grid-column: span 2;
 }
-.button.delete, .button.clear, .button.clear-entry {
-    background-color: #d9534f;
-    color: #fff;
+
+.button.equal:hover {
+    background-color: #e67e22;
 }
-.button:active {
-    transform: scale(0.95);
-}
+
 .navigation-buttons {
     display: flex;
     justify-content: center;
@@ -75,7 +172,7 @@
 }
 
 .nav-button:hover {
-    background-color: #0e7a20;
+    background-color: #128a23;
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
