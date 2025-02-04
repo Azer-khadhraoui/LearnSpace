@@ -1,10 +1,14 @@
 
+
 # **📚 LearnSpace - Plateforme Éducative Interactive**  
 
 **LearnSpace** est une plateforme innovante conçue pour rendre l’apprentissage plus engageant et accessible à tous. Que vous soyez étudiant ou passionné de savoir, cette plateforme met à votre disposition une multitude d’outils interactifs pour explorer et approfondir vos connaissances.  
 
 ## **💡 Live Demo**  
 [(https://azer-khadhraoui.github.io/LearnSpace/)  ](https://azer-khadhraoui.github.io/LearnSpace/) 
+
+![main](https://github.com/user-attachments/assets/20eee2e6-3fb5-45f4-8f27-ed4787c3731c)
+
 
 ## **🚀 Fonctionnalités**  
 
@@ -44,13 +48,26 @@ Apprenez en vous amusant avec :
 
 
 ### 💻 **Éditeur de code**  
-Écrivez, testez et exécutez du code directement sur la plateforme.  
+Écrivez, testez et exécutez du code directement sur la plateforme. 
+
+![code](https://github.com/user-attachments/assets/7dda5727-8dbc-49c9-aa78-f39f8221c7af)
+
 
 ### 🖥️ **Découvrir l’informatique**  
 Explorez les bases et les concepts avancés de l’informatique.  
 
+![c](https://github.com/user-attachments/assets/9943f276-a7a3-48c8-9ba9-1ed700d5d81b)
+![js](https://github.com/user-attachments/assets/4848b60d-d5fd-4d47-a163-8a6892bb1814)
+
+
+
+
+
 ### 🌐 **Nouveautés en informatique**  
 Restez informé des dernières tendances et innovations technologiques.  
+
+![dec1](https://github.com/user-attachments/assets/7346d9e4-89f3-4acf-935c-b2ccf74cbdac)
+![csec](https://github.com/user-attachments/assets/78d61e7a-5141-4de7-9c62-e72b2f9d97a8)
 
 ### 📝 **Test**  
 Évaluez vos compétences avec des tests dédiés
@@ -73,7 +90,12 @@ LearnSpace est développé avec les technologies suivantes :
    ```  
 2. **Ouvrez `index.html` dans votre navigateur** pour tester l'application.  
 
+📱 Le site sur le téléphone
 
+LearnSpace est entièrement responsive et optimisé pour une utilisation sur mobile. Vous pouvez y accéder depuis votre smartphone lorsque vous scanner le qr code pour profiter de toutes ses fonctionnalités où que vous soyez.
+(localhost)
 
-  
+  ![cap2222](https://github.com/user-attachments/assets/ebcb2fd8-e4f4-474e-9e7a-497e866fbfb9)
+![cap111](https://github.com/user-attachments/assets/93086885-0208-438f-9655-f0a918876031)
+
 
