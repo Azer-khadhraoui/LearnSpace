@@ -91,7 +91,7 @@ LearnSpace est développé avec les technologies suivantes :
    ```  
 2. **Ouvrez `index.html` dans votre navigateur** pour tester l'application.  
 
-📱 Le site sur le téléphone
+## 📱 **Le site sur le téléphone**
 
 LearnSpace est entièrement responsive et optimisé pour une utilisation sur mobile. Vous pouvez y accéder depuis votre smartphone lorsque vous scanner le qr code pour profiter de toutes ses fonctionnalités où que vous soyez.
 (localhost)
