@@ -1,5 +1,6 @@
 
 
+
 # **📚 LearnSpace - Plateforme Éducative Interactive**  
 
 **LearnSpace** est une plateforme innovante conçue pour rendre l’apprentissage plus engageant et accessible à tous. Que vous soyez étudiant ou passionné de savoir, cette plateforme met à votre disposition une multitude d’outils interactifs pour explorer et approfondir vos connaissances.  
@@ -95,7 +96,8 @@ LearnSpace est développé avec les technologies suivantes :
 LearnSpace est entièrement responsive et optimisé pour une utilisation sur mobile. Vous pouvez y accéder depuis votre smartphone lorsque vous scanner le qr code pour profiter de toutes ses fonctionnalités où que vous soyez.
 (localhost)
 
-  ![cap2222](https://github.com/user-attachments/assets/ebcb2fd8-e4f4-474e-9e7a-497e866fbfb9)
-![cap111](https://github.com/user-attachments/assets/93086885-0208-438f-9655-f0a918876031)
+![cap111](https://github.com/user-attachments/assets/4422e3f5-10f0-4540-8f19-11c99300305c) ![cap2222](https://github.com/user-attachments/assets/da6743c8-75aa-4208-8f25-49a6e23d70fc)
+
+
 
 
